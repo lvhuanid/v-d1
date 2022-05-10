@@ -1,30 +1,37 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-  <el-button>I am ElButton</el-button>
+
+  <Nav />
+  <div class="height"></div>
+  <router-view />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "@/components/HelloWorld";
 import { ElButton } from 'element-plus'
+import Nav from "@/components/Nav";
+import "./utils/reset.css"
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
-    ElButton
+    ElButton,
+    Nav
 
   }
 }
 </script>
 
-<style>
+<style >
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /*margin-top: 60px;*/
+}
+.height{
+  height: 58px;
 }
 </style>
